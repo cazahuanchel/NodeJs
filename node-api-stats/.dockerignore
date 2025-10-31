@@ -1,0 +1,7 @@
+# Ignora la carpeta de módulos de node, la reconstruimos en el contenedor.
+node_modules
+# Ignora el archivo de configuración de NPM que contiene tokens
+.npmrc
+# Ignora las carpetas de logs y configuraciones de debug
+npm-debug.log
+.vscode
