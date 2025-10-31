@@ -1,6 +1,4 @@
-// node-api-stats/server.test.js
-
-const { calculateMatrixStats } = require('./utils/stats');
+const { calculateMatrixStats } = require('../../server/logic/logic_stats');
 
 // Definición de las pruebas con Jest
 describe('calculateMatrixStats', () => {

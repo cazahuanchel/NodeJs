@@ -1,0 +1,15 @@
+FROM node:20-slim
+
+WORKDIR /usr/src/app
+
+# Instala dependencias
+COPY package*.json ./ 
+RUN npm install --omit=dev
+
+# Copia código fuente
+COPY . .
+
+EXPOSE 3001
+
+# Inicia la aplicación (la ruta es relativa al WORKDIR /usr/src/app)
+CMD [ "node", "server/server.js" ]
