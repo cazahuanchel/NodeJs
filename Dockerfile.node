@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 
 # Instala dependencias
 COPY package*.json ./ 
-RUN npm install --omit=dev
+# ⬇️ CORRECCIÓN: Forzamos el registro público y evitamos el uso de configuraciones locales.
+RUN npm install --omit=dev --no-fund --registry=https://registry.npmjs.org/
 
 # Copia código fuente
 COPY . .
